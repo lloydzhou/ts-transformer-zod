@@ -1,0 +1,67 @@
+{
+  "name": "ts-transformer-zod",
+  "version": "1.0.0",
+  "description": "TypeScript transformer for generating Zod schemas from TypeScript types",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "transformer.js",
+    "transformer.ts"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint . --ext .ts"
+  },
+  "keywords": [
+    "typescript",
+    "transformer",
+    "zod",
+    "schema",
+    "validation",
+    "ttypescript"
+  ],
+  "author": "lloydzhou@qq.com",
+  "license": "MIT",
+  "packageManager": "pnpm@10.7.0",
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "import": "./index.js",
+      "default": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./transformer": {
+      "require": "./transformer.js",
+      "import": "./transformer.js",
+      "default": "./transformer.js",
+      "types": "./transformer.ts"
+    }
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.29",
+    "ts-node": "^10.9.1",
+    "ttypescript": "^1.5.15",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.5.0",
+    "zod": ">=3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lloydzhou/ts-transformer-zod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lloydzhou/ts-transformer-zod/issues"
+  },
+  "homepage": "https://github.com/lloydzhou/ts-transformer-zod#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

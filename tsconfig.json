@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+      "plugins": [
+        {
+          "transform": "./transformer.ts",
+          "type": "program"
+        }
+      ],
+      "lib": [
+        "ESNext",
+        "ES2015",
+        "DOM"
+      ],
+      "target": "ESNext",
+      "module": "CommonJS",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+      "src/**/*.ts",
+      "./transformer.ts",
+    ],
+  }

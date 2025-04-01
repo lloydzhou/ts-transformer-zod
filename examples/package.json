@@ -1,0 +1,26 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "Examples for ts-transformer-zod",
+  "scripts": {
+    "prepare": "ts-patch install -s",
+    "test": "ts-node -p ./tsconfig.json src/index.ts",
+    "build": "tspc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.7.0",
+  "devDependencies": {
+    "ts-patch": "^3.3.0",
+    "ts-transformer-zod": "link:..",
+    "ttypescript": "^1.5.15",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "@types/node": "^18.15.0"
+  },
+  "dependencies": {
+    "zod": "^3.21.4"
+  }
+}

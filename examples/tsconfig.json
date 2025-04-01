@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "plugins": [
+        { "transform": "ts-transformer-keys/transformer" },
+        { "transform": "ts-transformer-zod/transformer"}
+      ],
+      "lib": [
+        "ESNext",
+        "DOM"
+      ],
+      "target": "ES6",
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "skipLibCheck": true,
+      "allowSyntheticDefaultImports": true,
+      "forceConsistentCasingInFileNames": true
+    }
+  }
+  
