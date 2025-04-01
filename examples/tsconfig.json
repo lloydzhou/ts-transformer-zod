@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
       "plugins": [
-        { "transform": "ts-transformer-keys/transformer" },
         { "transform": "ts-transformer-zod/transformer"}
       ],
       "lib": [

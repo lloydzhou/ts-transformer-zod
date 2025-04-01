@@ -82,12 +82,6 @@ function transformer(program) {
             const typeChecker = program.getTypeChecker();
             let needsZodImport = false;
             function visit(node) {
-                try {
-                    console.log("Visiting node:", node.getText());
-                }
-                catch (e) {
-                    console.error("Error visiting node:", e);
-                }
                 if (isZObjectImportExpression(node)) {
                     // @ts-ignore
                     return;

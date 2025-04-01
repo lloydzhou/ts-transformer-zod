@@ -11,4 +11,5 @@ export type TypeToZod<T extends object> = z.ZodObject<{
             : z.ZodArray<z.ZodType<T[K] extends any[] ? T[K][number] : never>>
 }>
 
-export default function zobject<T extends object>(): TypeToZod<T>;
+export function zobject<T extends object>(): TypeToZod<T>;
+export default zobject;

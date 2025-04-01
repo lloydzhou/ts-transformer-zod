@@ -2,28 +2,31 @@ import zobject from "ts-transformer-zod";
 
 // 示例接口
 interface User {
+    id: number;
     name: string;
-    age: number;
-    isAdmin: boolean;
+    email: string;
+    age?: number;
+    roles: string[];
+    metadata: {
+        createdAt: Date;
+        active: boolean;
+    };
 }
 
 // 使用 transformer 的 zobject 方法
 const userSchema = zobject<User>();
 
-console.log("Generated Zod schema:", userSchema);
-
-// // 测试用例
-const validUser = {
-    name: "Alice",
-    age: 30,
-    isAdmin: true,
+// 使用模式验证数据
+const userData = {
+  id: 1,
+  name: "张三",
+  email: "zhangsan@example.com",
+  age: 30,
+  roles: ["admin"],
+  metadata: {
+    createdAt: new Date(),
+    active: true
+  }
 };
 
-const invalidUser = {
-    name: "Alice",
-    age: "30", // 错误：age 应为 number
-    isAdmin: true,
-};
-
-console.log("Valid user validation:", userSchema.safeParse(validUser)); // 应通过
-console.log("Invalid user validation:", userSchema.safeParse(invalidUser)); // 应失败
+console.log("Valid user validation:", userSchema.safeParse(userData)); // 应通过
