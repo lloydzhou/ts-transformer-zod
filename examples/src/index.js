@@ -4,9 +4,12 @@ const userSchema = z.object({
     id: z.number(),
     name: z.string(),
     email: z.string(),
-    age: z.number(),
-    roles: z.any(),
-    metadata: z.any()
+    age: z.number().optional(),
+    roles: z.array(z.string()),
+    metadata: z.object({
+        createdAt: z.date(),
+        active: z.boolean()
+    })
 });
 // 使用模式验证数据
 const userData = {

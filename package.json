@@ -1,6 +1,6 @@
 {
   "name": "ts-transformer-zod",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript transformer for generating Zod schemas from TypeScript types",
   "files": [
     "index.js",

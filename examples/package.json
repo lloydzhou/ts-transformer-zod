@@ -2,6 +2,7 @@
   "name": "examples",
   "version": "1.0.0",
   "description": "Examples for ts-transformer-zod",
+  "type": "module",
   "scripts": {
     "prepare": "ts-patch install -s",
     "test": "ts-node -p ./tsconfig.json src/index.ts",
