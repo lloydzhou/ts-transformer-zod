@@ -5,8 +5,7 @@
   "files": [
     "index.js",
     "index.d.ts",
-    "transformer.js",
-    "transformer.ts"
+    "transformer.js"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -35,8 +34,7 @@
     "./transformer": {
       "require": "./transformer.js",
       "import": "./transformer.js",
-      "default": "./transformer.js",
-      "types": "./transformer.ts"
+      "default": "./transformer.js"
     }
   },
   "dependencies": {
