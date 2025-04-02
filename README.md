@@ -42,7 +42,7 @@ ts-patch install
 }
 ```
 
-3. 使用 ttypescript 编译你的代码：
+3. 使用 ts-patch 编译你的代码：
 
 ```bash
 <yarn|npm|pnpm> tspc
